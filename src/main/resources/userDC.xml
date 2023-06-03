@@ -19,7 +19,7 @@
 <!--        <property name="str" value="秦"/>-->
     </bean>
 
-    <!--autowire byName 按名称自动配 -->
+<!--    <&#45;&#45;autowire byName 按名称自动配 &ndash;&gt;-->
 <!--    <bean id="userDC1" class="com.liwenjie.pojo.UserDC" autowire="byName">-->
 <!--        <property name="str" value="拾荒"/>-->
 <!--      &lt;!&ndash;  <property name="cat" value="1"/>-->
