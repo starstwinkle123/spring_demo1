@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--t团队合作通过import实现-->
+    <import resource="path.xml"/>
+
+
+    <bean id="Hello" class="com.liwenjie.pojo.Hello">
+        <property name="name" value="Spring"/>
+    </bean>
+    <bean id="CommonImpl" class="com.liwenjie.Dos.Impl.UserDaoImpl"></bean>
+    <bean id="OracleImpl" class="com.liwenjie.Dos.Impl.UserDaoOracleImpl" >
+    </bean>
+
+    <bean id="ServiceImpl" class="com.liwenjie.service.Impl.UserServiceImpl">
+        <property name="userDao" ref="OracleImpl"/>
+    </bean>
+
+
+    <bean id="user" class="com.liwenjie.pojo.User">
+        <property name="name" value="狂大"/>
+    </bean>
+
+    <!--根据index参数设置下标-->
+   <!-- <bean id="userT" class="com.liwenjie.pojo.UserT">
+        &lt;!&ndash;index指构造方法 ， 下标0开始&ndash;&gt;
+        <constructor-arg value="大神2" index="0"/>
+    </bean>
+
+    &lt;!&ndash;根据参数设置&ndash;&gt;
+    <bean id="userT" class="com.liwenjie.pojo.UserT">
+        &lt;!&ndash;name指参数名&ndash;&gt;
+        <constructor-arg value="大神2" name="name"/>
+    </bean>-->
+
+    <!--给据参数类型设置-->
+    <bean id="useruu" name="useru1 useru2,useru3;useru4 " class="com.liwenjie.pojo.UserT">
+        <constructor-arg value="大神2" type="java.lang.String"/>
+    </bean>
+
+</beans>

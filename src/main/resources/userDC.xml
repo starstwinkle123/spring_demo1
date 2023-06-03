@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+
+<!--    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor "/>-->
+    <bean id="dog" class="com.liwenjie.pojo.Dog"></bean>
+    <bean id="dog1" class="com.liwenjie.pojo.Dog"></bean>
+    <bean id="cat" class="com.liwenjie.pojo.Cat"></bean>
+    <bean id="UserDC" class="com.liwenjie.pojo.UserDC"></bean>
+
+    <bean id="userDC" class="com.liwenjie.pojo.UserDC">
+<!--        <property name="cat" ref="cat"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--        <property name="str" value="秦"/>-->
+    </bean>
+
+    <!--autowire byName 按名称自动配 -->
+<!--    <bean id="userDC1" class="com.liwenjie.pojo.UserDC" autowire="byName">-->
+<!--        <property name="str" value="拾荒"/>-->
+<!--      &lt;!&ndash;  <property name="cat" value="1"/>-->
+<!--        <property name="dog" value="2"/>&ndash;&gt;-->
+<!--     </bean>-->
+</beans>
